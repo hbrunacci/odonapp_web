@@ -7,5 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.toggle('is-open');
       toggle.classList.toggle('is-open');
     });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+      });
+    });
   }
 });
