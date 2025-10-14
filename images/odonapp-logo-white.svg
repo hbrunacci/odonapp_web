@@ -1,0 +1,5 @@
+<svg width="220" height="80" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M70 20C75 8 90 5 100 15C110 25 110 45 100 60C90 75 65 75 55 55C45 35 55 20 70 20Z" stroke="#00E0FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M70 30C75 25 85 25 90 35" stroke="#7CF9E0" stroke-width="6" stroke-linecap="round"/>
+  <text x="115" y="48" font-family="Poppins, sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">odonapp</text>
+</svg>
