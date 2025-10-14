@@ -12,8 +12,9 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <a href="#inicio" class="logo">
-        <img src="https://dummyimage.com/160x50/ffffff/00a6ff&text=odonapp" alt="Odonapp logo">
+      <a href="#inicio" class="logo" aria-label="Odonapp">
+        <img src="images/odonapp-logo.svg" alt="Odonapp">
+
       </a>
       <nav class="main-nav">
         <a href="#conocenos">Conócenos</a>
@@ -33,14 +34,44 @@
     <section id="inicio" class="hero">
       <div class="container">
         <div class="hero-content">
-          <div class="badge">Solución digital</div>
-          <img class="hero-logo" src="images/odonapp-logo.svg" alt="Odonapp">
+          <div class="badge">Solución digital integral</div>
+          <h1>
+            La herramienta que hace más
+            <span>fácil y transparente</span>
+            la gestión administrativa odontológica.
+          </h1>
           <p class="hero-text">
-            La herramienta que hace más <strong>fácil</strong> y <strong>transparente</strong> la gestión administrativa de las prácticas odontológicas.
+            Automatizamos liquidaciones, cobranzas y controles de cobertura para que los círculos y profesionales se enfoquen en sus pacientes.
           </p>
-          <a class="hero-button" href="#contacto">Quiero saber más</a>
+          <div class="hero-actions">
+            <a class="hero-button" href="#contacto">Solicitar demo</a>
+            <a class="hero-secondary" href="#beneficios">Ver funcionalidades</a>
+          </div>
+          <div class="hero-highlights" aria-label="Principales beneficios">
+            <article class="highlight-card">
+              <h3>Liquidaciones en un click</h3>
+              <p>Procesos automáticos y trazables para cada obra social.</p>
+            </article>
+            <article class="highlight-card">
+              <h3>Cobertura validada</h3>
+              <p>Verificación online previa a cada práctica y paciente.</p>
+            </article>
+            <article class="highlight-card">
+              <h3>Indicadores en vivo</h3>
+              <p>Paneles claros con estados, montos y métricas clave.</p>
+            </article>
+          </div>
         </div>
-        <div class="hero-graphic" aria-hidden="true"></div>
+        <div class="hero-graphic" aria-hidden="true">
+          <div class="hero-orb"></div>
+          <div class="hero-card">
+            <img src="images/odonapp-logo-white.svg" alt="">
+            <div class="hero-card-body">
+              <p>Gestión 360°</p>
+              <span>Turnos · Obras sociales · Facturación</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
