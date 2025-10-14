@@ -8,6 +8,10 @@
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,7 +20,35 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: var(--color-text);
-  background: #ffffff;
+  background: radial-gradient(circle at 12% 8%, rgba(0, 214, 201, 0.08), transparent 42%),
+    radial-gradient(circle at 82% 0%, rgba(79, 104, 255, 0.08), transparent 48%),
+    linear-gradient(180deg, #f4f7ff 0%, #ffffff 38%, #f7f9ff 100%);
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: -240px auto auto -180px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 214, 201, 0.16) 0%, rgba(0, 214, 201, 0) 70%);
+  z-index: -1;
+  filter: blur(0px);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: auto -280px -300px auto;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(61, 74, 242, 0.15) 0%, rgba(61, 74, 242, 0) 70%);
+  z-index: -1;
+  filter: blur(0px);
 }
 
 a {
@@ -330,12 +362,14 @@ img {
 
 .highlight-card {
   position: relative;
-  padding: 1.5rem;
+  padding: 1.6rem;
   border-radius: 22px;
-  background: rgba(10, 11, 58, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(5, 8, 38, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 48px rgba(5, 8, 38, 0.42);
   min-height: 170px;
+  backdrop-filter: blur(18px);
+  overflow: hidden;
 }
 
 .highlight-card::before {
@@ -348,6 +382,15 @@ img {
   border-radius: 12px;
   background: linear-gradient(140deg, rgba(0, 214, 201, 0.9), rgba(61, 74, 242, 0.65));
   opacity: 0.9;
+}
+
+.highlight-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 1.4rem 1.2rem 1.4rem;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 214, 201, 0.7), rgba(61, 74, 242, 0.7));
+  opacity: 0.85;
 }
 
 .highlight-card h3 {
@@ -528,8 +571,8 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267d6?auto=format&fit=crop&w=880&q=80') center/cover;
-  filter: grayscale(20%) brightness(0.75);
+  background: url('images/tipo.jpeg') center/cover;
+  filter: grayscale(10%) brightness(0.78);
 }
 
 .values-image::after {
