@@ -200,7 +200,10 @@ img {
   background:
     linear-gradient(145deg, rgba(9, 5, 60, 0.78) 0%, rgba(10, 5, 86, 0.7) 42%, rgba(12, 9, 110, 0.68) 100%),
     radial-gradient(circle at 6% 12%, rgba(0, 214, 201, 0.26), rgba(0, 214, 201, 0) 55%),
-    #0e0837;
+    url('images/fondo-azul.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
   color: #fff;
@@ -458,8 +461,24 @@ img {
 }
 
 .about {
+  position: relative;
   padding: 5rem 0;
-  background: #ffffff;
+  color: #fff;
+  background: url('images/fondo-header-conocenos.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 5, 32, 0.82), rgba(4, 7, 42, 0.78));
+}
+
+.about .container {
+  position: relative;
 }
 
 .about-content {
@@ -475,6 +494,7 @@ img {
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .ally {
@@ -495,9 +515,25 @@ img {
 }
 
 .value {
+  position: relative;
   padding: 5rem 0;
-  background: #ffffff;
   text-align: center;
+  color: #fff;
+  background: url('images/fondo-propuesta-beneficios.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.value::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 10, 60, 0.82), rgba(8, 10, 60, 0.78));
+}
+
+.value .container {
+  position: relative;
 }
 
 .value h2 {
@@ -510,10 +546,11 @@ img {
   line-height: 1.8;
   margin: 0 auto 1.5rem;
   max-width: 780px;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .value strong {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .benefits {
@@ -567,11 +604,24 @@ img {
 }
 
 .values {
+  position: relative;
   padding: 5rem 0;
-  background: linear-gradient(120deg, rgba(0, 214, 201, 0.12), rgba(61, 74, 242, 0.08));
+  background: url('images/fondo-valores.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.values::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(6, 8, 40, 0.85), rgba(9, 12, 72, 0.78));
 }
 
 .values .container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 3rem;
@@ -593,13 +643,14 @@ img {
 
 .values li h3 {
   font-size: 1.35rem;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   margin-bottom: 0.5rem;
 }
 
 .values li p {
   line-height: 1.7;
   margin: 0;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .values-image {
@@ -608,6 +659,7 @@ img {
   border-radius: 32px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(61, 74, 242, 0.2));
   overflow: hidden;
+  box-shadow: 0 24px 50px rgba(3, 6, 32, 0.45);
 }
 
 .values-image::before {
@@ -626,11 +678,23 @@ img {
 }
 
 .site-footer {
-  background: #f6f7ff;
-  color: var(--color-dark);
+  position: relative;
+  background: url('images/fondo-contacto.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4, 6, 28, 0.86), rgba(6, 8, 40, 0.88));
 }
 
 .site-footer .container {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -642,6 +706,7 @@ img {
 .cta-block p {
   font-size: clamp(1.2rem, 1.4vw + 1rem, 1.8rem);
   margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .cta-link {
@@ -657,13 +722,20 @@ img {
 }
 
 .contact-info {
+  position: relative;
   display: grid;
   gap: 0.6rem;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-info a {
+  color: inherit;
 }
 
 .footer-bottom {
-  background: #0b0536;
+  position: relative;
+  background: rgba(5, 6, 36, 0.85);
   color: #fff;
   padding: 1.8rem 0;
 }
