@@ -363,9 +363,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          todavía no estén registradas se mandan solas a la obra social. No hay que apretar nada
          más.</p>
 
-      <p>El botón <strong>Cargar en la obra social</strong> sigue estando en la pantalla, pero
-         es para forzar un envío, no un paso obligatorio del circuito. Lo que ya está registrado
-         no se vuelve a mandar: podés guardar la orden las veces que quieras sin duplicar nada.</p>
+      <p>Lo que ya está registrado no se vuelve a mandar: podés guardar la orden las veces que
+         quieras sin duplicar nada.</p>
+
+      <p>El botón verde <strong>Cargar en la obra social</strong> está para forzar el envío, y
+         <strong>desaparece en cuanto la orden queda registrada</strong>. O sea: si no lo ves,
+         es buena señal. Si la obra social rechazó la orden, en su lugar aparece
+         <strong>Reenviar a la OS</strong>.</p>
 
       <div class="aviso">
         <span class="rotulo">Si intentás cerrar sin guardar</span>
@@ -388,9 +392,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </tr>
             <tr>
               <td><span class="pill espera">EN-AUTORIZACIÓN</span></td>
-              <td>Ya se mandó y la obra social la está mirando. No hay que hacer nada: el
-                  sistema consulta el estado solo, cada 30 minutos, de 8 a 19 y de lunes a
-                  viernes, hasta 2 jornadas hábiles.</td>
+              <td>Ya se mandó y quedó del lado de la obra social. De tu parte no falta nada;
+                  el estado cambia cuando ella la resuelve.</td>
             </tr>
             <tr>
               <td><span class="pill ok">AUTORIZADA</span></td>
@@ -421,8 +424,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          además prestaciones de tratamiento, esas sí van a tener el suyo.</p>
 
       <h3>La orden quedó en EN-AUTORIZACIÓN</h3>
-      <p>No la vuelvas a mandar. El sistema la consulta solo. Si pasadas las dos jornadas
-         hábiles sigue igual, avisá a la administración.</p>
+      <p>Quiere decir que se mandó bien y que la obra social todavía no la resolvió. No la
+         vuelvas a cargar ni la mandes de nuevo: ya está de su lado, y volver a enviarla puede
+         terminar en una prestación duplicada. Si sigue igual varios días, pasá el número de
+         orden a la administración para que lo reclame.</p>
 
       <h2 id="s6"><span class="num">6.</span> Si algo falla</h2>
 
@@ -433,10 +438,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </thead>
           <tbody>
             <tr>
-              <td>No se pudo obtener datos del Paciente, verifique el nro de socio</td>
-              <td>Revisá el número de afiliado del paciente. Si está bien, es que la obra
-                  social no contestó: usá <strong>Reintentar validación</strong> o dejá que el
-                  sistema reintente solo.</td>
+              <td>…no respondió a tiempo, se reintentará en 2 minutos automáticamente o
+                  presione reintentar</td>
+              <td>La obra social no contestó. No es un problema del paciente ni tuyo: seguí
+                  trabajando, el sistema reintenta solo. Si tenés apuro, apretá
+                  <strong>Reintentar validación</strong>.</td>
+            </tr>
+            <tr>
+              <td>No se pudo consultar a… la validación falló por un problema del sistema,
+                  no por los datos del paciente</td>
+              <td>Tal cual lo dice: no revises el número de afiliado, no es eso. Probá una vez
+                  más y, si sigue, avisá a la administración.</td>
             </tr>
             <tr>
               <td>No se encontró el prestador</td>
