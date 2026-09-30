@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -9,11 +9,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MB8L476S');</script>
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Odonapp | Gestión odontológica inteligente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.className = 'js';</script>
+  <title>Odonapp — Tecnología para círculos odontológicos</title>
+  <meta name="description" content="Odonapp digitaliza y centraliza la gestión de prestaciones para construir una experiencia más simple, ágil y trazable para el círculo y sus asociados.">
+  <link rel="canonical" href="https://www.odonapp.com/">
+  <meta name="theme-color" content="#12123A">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Odonapp">
+  <meta property="og:url" content="https://www.odonapp.com/">
+  <meta property="og:title" content="Odonapp — Tecnología para círculos odontológicos">
+  <meta property="og:description" content="Odonapp digitaliza y centraliza la gestión de prestaciones para construir una experiencia más simple, ágil y trazable para el círculo y sus asociados.">
+  <meta property="og:image" content="https://www.odonapp.com/images/og-odonapp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Odonapp · Simplificamos la gestión">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,223 +42,580 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB8L476S"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <header class="site-header">
-    <div class="container">
-      <a href="#inicio" class="logo" aria-label="Odonapp">
-        <img src="images/logo.png" alt="Odonapp">
 
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a href="#top" class="site-header__logo" aria-label="Odonapp — inicio">
+        <picture>
+          <source srcset="images/odonapp-logo.webp" type="image/webp">
+          <img src="images/odonapp-logo.png" alt="Odonapp · Simplificamos la gestión" width="298" height="88" fetchpriority="high">
+        </picture>
       </a>
-      <nav class="main-nav">
-        <a href="#conocenos">Conocenos</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#valores">Valores</a>
-        <a class="cta" href="#contacto">Contacto</a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#que-es">Qué es</a>
+        <a href="#valor">El valor</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#como">Cómo lo hacemos</a>
+        <a href="#tutoriales">Tutoriales</a>
+        <a href="#equipo">Equipo</a>
       </nav>
-      <button class="nav-toggle" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="site-header__actions">
+        <a class="btn btn--outline btn--sm site-header__login" href="https://www.odonapp.com">Ingresar</a>
+        <a class="btn btn--indigo btn--sm" href="#contacto"><span class="hide-sm">Solicitar una demo</span><span class="show-sm">Demo</span></a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-mobile">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section id="inicio" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="badge">Solución digital integral</div>
-          <h1>De la ficha al futuro.</h1>
-          <p class="hero-text">
-            El sistema que conecta consultorios, círculos y obras sociales. Odonapp es la solución digital integral que hace más
-            fácil, transparente y profesional la gestión administrativa odontológica.
+  <!-- Menú mobile (overlay a pantalla completa) -->
+  <div class="menu-mobile" id="menu-mobile" role="dialog" aria-modal="true" aria-label="Menú" hidden>
+    <span class="deco deco--indigo menu-mobile__d1" aria-hidden="true"></span>
+    <span class="deco deco--turquesa menu-mobile__d2" aria-hidden="true"></span>
+    <div class="menu-mobile__top">
+      <span class="logo-pill logo-pill--sm">
+        <picture>
+          <source srcset="images/odonapp-logo.webp" type="image/webp">
+          <img src="images/odonapp-logo.png" alt="Odonapp" width="298" height="88" loading="lazy">
+        </picture>
+      </span>
+      <button class="menu-mobile__close" type="button" aria-label="Cerrar menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="menu-mobile__nav" aria-label="Principal (mobile)">
+      <a href="#que-es">Qué es</a>
+      <a href="#valor">El valor</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#como">Cómo lo hacemos</a>
+      <a href="#tutoriales">Tutoriales</a>
+      <a href="#equipo">Equipo</a>
+    </nav>
+    <div class="menu-mobile__actions">
+      <a class="btn btn--turquesa btn--lg btn--block" href="#contacto">Solicitar una demo</a>
+      <a class="btn btn--ghost-light btn--lg btn--block" href="https://www.odonapp.com">Ingresar a la plataforma</a>
+    </div>
+  </div>
+
+  <main id="contenido">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="top" class="hero section--navy">
+      <span class="deco deco--indigo hero__d1" aria-hidden="true"></span>
+      <span class="deco deco--turquesa hero__d2" aria-hidden="true"></span>
+      <span class="deco deco--ring hero__d3" aria-hidden="true"></span>
+      <span class="deco deco--ring-soft hero__d4" aria-hidden="true"></span>
+
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="pill-tag">
+            <span class="pill-tag__dot" aria-hidden="true"></span><span><span class="hide-sm">Tecnología creada</span><span class="show-sm">Creada</span> para círculos odontológicos</span>
           </p>
-          <p class="hero-text">
-            Automatizá liquidaciones, cobranzas y controles de cobertura para que los círculos y profesionales puedan enfocarse
-            en lo más importante: sus pacientes.
-          </p>
-          <div class="hero-actions">
-            <a class="hero-button" href="#contacto">Solicitá una demo</a>
-            <a class="hero-secondary" href="#beneficios">Ver funcionalidades</a>
+          <h1>La gestión de tu círculo también puede <span class="t-turquesa">evolucionar.</span></h1>
+          <p class="hero__lead">Odonapp digitaliza y centraliza la gestión de prestaciones para construir una experiencia más simple, ágil y trazable para el círculo y sus asociados.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--turquesa btn--lg" href="#contacto">Solicitar una demo
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--ghost-light btn--lg" href="#funcionalidades">Ver funcionalidades</a>
           </div>
-          <div class="hero-highlights" aria-label="Principales beneficios">
-            <article class="highlight-card">
-                <div class="icon-circle">
-                    <svg viewBox="0 0 24 24"><path d=""/></svg>
-                </div>
-              <h3>Liquidaciones en un click</h3>
-              <p>Procesos automáticos y trazables adaptados a cada obra social.</p>
-            </article>
-            <article class="highlight-card">
-                <div class="icon-circle">
-                    <svg viewBox="0 0 24 24"><path d="..."/></svg>
-                </div>
-              <h3>Cobertura validada en tiempo real</h3>
-              <p>Verificación online previa a cada práctica y paciente.</p>
-            </article>
-            <article class="highlight-card">
-                <div class="icon-circle">
-                    <svg viewBox="0 0 24 24"><path d="..."/></svg>
-                </div>
-              <h3>Indicadores en vivo</h3>
-              <p>Paneles claros con estados, montos y métricas clave para una gestión ágil.</p>
-            </article>
-          </div>
+          <ul class="hero__checks">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Auditoría online</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Validación con ARCA</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Acompañamiento del equipo fundador</li>
+          </ul>
         </div>
-        <div class="hero-graphic" aria-hidden="true">
-          <div class="hero-orb"></div>
-          <div class="hero-card">
-            <img src="images/logotipo.png" alt="Isologo de Odonapp">
-            <div class="hero-card-body">
-              <p>Gestión 360°</p>
-              <span>Turnos · Obras sociales · Facturación</span>
+
+        <!--
+          Vista del producto (ilustrativa). Para reemplazarla por una captura real,
+          cambiar el contenido de .hero__visual por:
+          <picture><source srcset="images/captura.webp" type="image/webp">
+          <img class="hero__shot" src="images/captura.png" alt="..." width="..." height="..."></picture>
+        -->
+        <div class="hero__visual">
+          <div class="mock" role="img" aria-label="Vista ilustrativa del panel del profesional: carga de una nueva prestación validada por la auditoría online">
+            <div class="mock__bar">
+              <span class="mock__dots"><i></i><i></i><i></i></span>
+              <span class="mock__title">Panel del profesional</span>
+              <span class="mock__avatar"></span>
+            </div>
+            <div class="mock__body">
+              <div class="mock__head">
+                <span class="mock__h">Nueva prestación</span>
+                <span class="mock__sub">Todas las obras sociales · una pantalla</span>
+              </div>
+              <div class="mock__fields">
+                <div class="mock__field"><span>Obra social</span><b>Obra social · Plan</b></div>
+                <div class="mock__field mock__extra"><span>Paciente</span><b>Paciente de ejemplo</b></div>
+                <div class="mock__field"><span>Código de práctica</span><b>Consulta</b></div>
+                <div class="mock__field mock__extra"><span>Pieza / cara</span><b>Pieza 36</b></div>
+              </div>
+              <div class="mock__ok">
+                <span class="mock__ok-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>
+                <span><b>Auditoría online: práctica validada</b><small>Cumple las normas de trabajo de la obra social</small></span>
+              </div>
+              <div class="mock__flow">
+                <span class="mock__flow-label">Circuito de la prestación</span>
+                <div class="mock__steps">
+                  <span class="is-done">Cargada</span><i class="is-done"></i>
+                  <span class="is-done">Auditada</span><i></i>
+                  <span class="mock__extra">Presentada</span><i class="mock__extra"></i>
+                  <span>Liquidada</span>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="float-card" aria-hidden="true">
+            <span class="float-card__label">Cuenta corriente única</span>
+            <span>Prestaciones, débitos y materiales en un mismo resumen.</span>
+          </div>
+          <div class="float-pill" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            Clave para evitar débitos
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="conocenos" class="about">
-      <div class="container">
-        <div class="section-badge">._conocenos</div>
-        <div class="about-content">
-          <h2>Nuestra historia</h2>
-          <p>
-            En 2019, un Círculo Odontológico nos compartió su desafío: ordenar la gestión de prácticas, liquidaciones y pagos a los profesionales.
-          </p>
-          <p>
-            De esa necesidad nació Odonapp, un desarrollo conjunto pensado por y para los protagonistas de la odontología institucional.
-          </p>
-          <p>
-            Desde entonces, trabajamos junto a instituciones de todo el país, creando una herramienta que digitaliza y conecta toda la cadena administrativa odontológica.
-          </p>
-          <p>
-            Odonapp es el aliado tecnológico de los profesionales, las prestadoras y los círculos odontológicos. Simple, ágil y diseñado para los desafíos de estos tiempos.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="value" id="valor">
-      <div class="container">
-        <h2>Propuesta de valor</h2>
-        <p>
-          Odonapp abarca todo el proceso, desde el ingreso del paciente al consultorio hasta la liquidación final entre el círculo, la obra social y el profesional.
-        </p>
-        <p>
-          En una sola plataforma podés gestionar historia clínica, odontograma y coberturas; controlar liquidaciones y cobrabilidad en tiempo real; unificar la facturación y los pagos. <strong>Todo accesible, fácil y trazable, en un mismo lugar.</strong>
-        </p>
-      </div>
-    </section>
-
-    <section id="beneficios" class="benefits">
-      <div class="container">
-        <h2>¿Por qué elegirnos?</h2>
-        <div class="cards">
-          <article class="card">
-            <span>01</span>
-            <h3>Fichas médicas, historia clínica y odontograma digitales.</h3>
-          </article>
-          <article class="card">
-            <span>02</span>
-            <h3>Validación online de coberturas.</h3>
-          </article>
-          <article class="card">
-            <span>03</span>
-            <h3>Evitá débitos por prácticas sin autorización.</h3>
-          </article>
-          <article class="card">
-            <span>04</span>
-            <h3>Configurá normas específicas por obra social y plan.</h3>
-          </article>
-          <article class="card">
-            <span>05</span>
-            <h3>Liquidación masiva y control automático.</h3>
-          </article>
-          <article class="card">
-            <span>06</span>
-            <h3>Facturación electrónica integrada.</h3>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="valores" class="values">
-      <div class="container">
-        <div class="values-info">
-          <h2>Nuestros valores</h2>
-          <ul>
-            <li>
-              <h3>Colaboración</h3>
-              <p>Un aliado del día a día. Facilitamos tu administración para que ganes tiempo y tranquilidad.</p>
+    <!-- ===================== CLIENTES ===================== -->
+    <section class="clientes section--lavanda" aria-labelledby="clientes-titulo">
+      <div class="container clientes__grid">
+        <p class="clientes__stat"><strong>+750</strong> <span>odontólogos ya gestionan sus prestaciones con Odonapp</span></p>
+        <div class="clientes__right">
+          <h2 class="eyebrow eyebrow--muted" id="clientes-titulo">Círculos que ya evolucionan con nosotros</h2>
+          <ul class="clientes__list">
+            <li class="cliente">
+              <picture>
+                <source srcset="images/clientes/circulo-neuquen.webp" type="image/webp">
+                <img class="cliente__logo cliente__logo--round" src="images/clientes/circulo-neuquen.jpg" alt="Logo Círculo Odontológico de Neuquén" width="120" height="120" loading="lazy">
+              </picture>
+              <span>Círculo Odontológico de Neuquén</span>
             </li>
-            <li>
-              <h3>Responsabilidad y calidad</h3>
-              <p>Cuidamos tu trabajo, tu tiempo y tus recursos con la misma dedicación que vos cuidás a tus pacientes.</p>
+            <li class="cliente">
+              <picture>
+                <source srcset="images/clientes/aom-mar-del-plata.webp" type="image/webp">
+                <img class="cliente__logo cliente__logo--wide" src="images/clientes/aom-mar-del-plata.jpg" alt="Logo Asociación Odontológica Marplatense" width="313" height="120" loading="lazy">
+              </picture>
+              <span>Asociación Odontológica Marplatense</span>
+            </li>
+            <li class="cliente">
+              <picture>
+                <source srcset="images/clientes/circulo-pergamino-colon-capitan-sarmiento.webp" type="image/webp">
+                <img class="cliente__logo cliente__logo--round" src="images/clientes/circulo-pergamino-colon-capitan-sarmiento.jpg" alt="Logo Círculo Odontológico de Pergamino, Colón y Capitán Sarmiento" width="120" height="120" loading="lazy">
+              </picture>
+              <span><span class="hide-sm">Círculo Odontológico de </span>Pergamino, Colón y Capitán Sarmiento</span>
+            </li>
+            <li class="cliente">
+              <picture>
+                <source srcset="images/clientes/circulo-san-martin-junin-de-los-andes.webp" type="image/webp">
+                <img class="cliente__logo cliente__logo--wide cliente__logo--smj" src="images/clientes/circulo-san-martin-junin-de-los-andes.jpg" alt="Logo Círculo Odontológico San Martín y Junín de los Andes" width="426" height="120" loading="lazy">
+              </picture>
+              <span>San Martín y Junín de los Andes</span>
             </li>
           </ul>
-          <p>Con Odonapp estás a un solo click de mejorar la gestión de tu consultorio o institución.</p>
         </div>
-        <div class="values-image" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section id="confianza" class="ally">
+    <!-- ===================== 01 QUÉ ES ===================== -->
+    <section id="que-es" class="section que-es">
+      <span class="deco deco--turquesa-claro que-es__d1" aria-hidden="true"></span>
+      <span class="deco deco--ring-lavanda que-es__d2" aria-hidden="true"></span>
       <div class="container">
-        <h2>Confianza y presencia</h2>
-        <p>Ya confían en nosotros: Pergamino, Colón, Capitán Sarmiento, Neuquén y Mar del Plata.</p>
-        <p>Más de 700 odontólogos activos en todo el país gestionan con Odonapp. Crecemos junto a las instituciones que eligen profesionalizar su administración.</p>
+        <div class="split">
+          <div class="split__main">
+            <p class="eyebrow"><span class="eyebrow__num">01</span>Qué es Odonapp</p>
+            <h2>Tecnología pensada desde la realidad de los <span class="t-indigo">círculos odontológicos.</span></h2>
+          </div>
+          <div class="split__side prose">
+            <p>Odonapp es una plataforma desarrollada para acompañar la transformación digital de los círculos odontológicos, simplificando procesos administrativos y centralizando la información necesaria para gestionar las prestaciones de sus asociados.</p>
+            <p>Integra en un mismo entorno digital información, prestaciones, normas y aranceles de obras sociales, para construir un circuito administrativo más organizado y trazable.</p>
+          </div>
+        </div>
+
+        <h3 class="que-es__sub">¿Qué transforma Odonapp?</h3>
+        <ul class="transforma">
+          <li class="card-soft">
+            <span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+            <div><h4>Digitaliza</h4><p>La gestión de prestaciones pasa a un entorno digital, facilitando el acceso y la organización de la información.</p></div>
+          </li>
+          <li class="card-soft">
+            <span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
+            <div><h4>Centraliza</h4><p>La información necesaria para la gestión se encuentra organizada en un mismo lugar.</p></div>
+          </li>
+          <li class="card-soft">
+            <span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
+            <div><h4>Simplifica</h4><p>Procesos cotidianos más ágiles para el equipo administrativo y los profesionales.</p></div>
+          </li>
+          <li class="card-soft">
+            <span class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8a3 3 0 0 0 0-6H8a3 3 0 0 1 0-6h8"/></svg></span>
+            <div><h4>Da trazabilidad</h4><p>Mayor visibilidad sobre el circuito de cada prestación y la información asociada.</p></div>
+          </li>
+        </ul>
+        <div class="libera">
+          <span class="icon-box icon-box--lg"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span>
+          <div>
+            <h4>Libera capacidad</h4>
+            <p>El equipo puede dedicar más tiempo a iniciativas que generan valor para los asociados: capacitaciones, eventos, atención y nuevos proyectos institucionales.</p>
+          </div>
+        </div>
+        <p class="tagline">De la ficha a una gestión que <span class="t-indigo">evoluciona.</span></p>
+      </div>
+    </section>
+
+    <!-- ===================== 02 EL VALOR ===================== -->
+    <section id="valor" class="section section--navy valor">
+      <span class="deco deco--indigo valor__d1" aria-hidden="true"></span>
+      <span class="deco deco--ring valor__d2" aria-hidden="true"></span>
+      <div class="container valor__grid">
+        <div class="valor__intro">
+          <p class="eyebrow eyebrow--turquesa"><span class="eyebrow__num">02</span>El valor</p>
+          <h2>Cuando la gestión mejora, el impacto alcanza a <span class="t-turquesa">todo el círculo.</span></h2>
+          <p class="lead">La transformación digital genera valor en distintos niveles de la institución.</p>
+        </div>
+        <ul class="valor__cards">
+          <li class="valor-card">
+            <div class="valor-card__head">
+              <span class="chip chip--turquesa">Para los asociados</span>
+              <h3>Una experiencia más simple.</h3>
+            </div>
+            <div class="valor-card__body">
+              <p>Mayor acceso a la información necesaria para gestionar sus prestaciones y un círculo con mejores herramientas para acompañar su actividad profesional.</p>
+            </div>
+          </li>
+          <li class="valor-card">
+            <div class="valor-card__head">
+              <span class="chip chip--turquesa">Para el equipo administrativo</span>
+              <h3>Más herramientas para gestionar mejor.</h3>
+            </div>
+            <div class="valor-card__body">
+              <p>Información centralizada, procesos digitalizados y mayor trazabilidad para simplificar el trabajo cotidiano.</p>
+              <p>La tecnología permite, además, que las personas puedan dedicar mayor capacidad a tareas que aportan valor a la institución y sus asociados.</p>
+            </div>
+          </li>
+          <li class="valor-card valor-card--indigo">
+            <div class="valor-card__head">
+              <span class="chip chip--white">Para la dirección</span>
+              <h3>Más visibilidad para tomar mejores decisiones.</h3>
+            </div>
+            <div class="valor-card__body">
+              <p>Una gestión moderna, organizada y capaz de acompañar las necesidades actuales y futuras de sus asociados.</p>
+            </div>
+          </li>
+        </ul>
+        <blockquote class="valor__quote">
+          <span class="valor__quote-mark" aria-hidden="true">“</span>
+          <p>Porque modernizar la gestión también es una manera concreta de generar valor y <span class="t-turquesa">construir legado institucional.</span></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===================== 03 FUNCIONALIDADES ===================== -->
+    <section id="funcionalidades" class="section section--lavanda funcionalidades">
+      <div class="container">
+        <div class="func__header">
+          <div class="func__title">
+            <p class="eyebrow eyebrow--on-lavanda"><span class="eyebrow__num">03</span>Funcionalidades</p>
+            <h2>Una plataforma para cada parte <span class="t-indigo">del circuito.</span></h2>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Funcionalidades por perfil">
+            <button class="tabs__tab" type="button" role="tab" id="tab-consultorio" aria-controls="panel-consultorio" aria-selected="true"><span class="hide-sm">Para el consultorio</span><span class="show-sm">Consultorio</span></button>
+            <button class="tabs__tab" type="button" role="tab" id="tab-instituciones" aria-controls="panel-instituciones" aria-selected="false" tabindex="-1"><span class="hide-sm">Para las instituciones</span><span class="show-sm">Instituciones</span></button>
+          </div>
+        </div>
+
+        <div class="func__panel" id="panel-consultorio" role="tabpanel" aria-labelledby="tab-consultorio" tabindex="0">
+          <div class="func__cards">
+            <article class="func-card">
+              <span class="chip chip--turquesa-claro">Para el consultorio · profesional</span>
+              <span class="icon-box icon-box--tint icon-box--lg hide-sm"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+              <h3>Todas las obras sociales en una única pantalla</h3>
+              <p>Integración y validación de todas las obras sociales en la misma plataforma.</p>
+            </article>
+            <article class="func-card func-card--indigo">
+              <span class="deco deco--ring-white func-card__ring" aria-hidden="true"></span>
+              <span class="chip chip--turquesa">Clave para evitar débitos</span>
+              <span class="icon-box icon-box--lg hide-sm"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+              <h3>Auditoría online</h3>
+              <p>Según las normas de trabajo de cada obra social: solo podés cargar lo que vas a cobrar.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="func__panel" id="panel-instituciones" role="tabpanel" aria-labelledby="tab-instituciones" tabindex="0">
+          <div class="inst">
+            <div class="inst__head">
+              <span class="chip chip--turquesa">Para las instituciones</span>
+              <h3>Todo el circuito administrativo del círculo, en un solo lugar.</h3>
+            </div>
+            <ul class="inst__list">
+              <li><b>Ajustable 100%</b> a los requerimientos de cada obra social.</li>
+              <li><b>Cuenta corriente única.</b></li>
+              <li><b>Validación con ARCA</b> · Facturación.</li>
+              <li><b>Carga automática de débitos:</b> ahorra tiempo de procesos manuales.</li>
+              <li><b>Comunicación constante y automatizada</b> con el profesional.</li>
+              <li><b>Módulo de stock:</b> venta de materiales incluida en la cuenta corriente del socio.</li>
+              <li><b>Módulo de eventos, cursos y capacitaciones</b> para administrar toda su gestión.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 04 CÓMO LO HACEMOS ===================== -->
+    <section id="como" class="section como">
+      <div class="container">
+        <div class="split">
+          <div class="split__main">
+            <p class="eyebrow"><span class="eyebrow__num">04</span>Cómo lo hacemos</p>
+            <h2>La tecnología es una parte. <span class="t-indigo">El acompañamiento hace la diferencia.</span></h2>
+          </div>
+          <p class="split__side prose">Cada círculo tiene su propia historia, dinámica de trabajo y realidad operativa. Por eso, la incorporación de Odonapp comienza entendiendo cómo funciona la institución y continúa acompañando a las personas que van a utilizar la plataforma.</p>
+        </div>
+        <ol class="pasos">
+          <li class="paso"><span class="paso__num" aria-hidden="true">01</span><div><h3>Entendemos</h3><p>Conocemos la operación del círculo, sus procesos y necesidades.</p></div></li>
+          <li class="paso"><span class="paso__num" aria-hidden="true">02</span><div><h3>Configuramos</h3><p>Preparamos el sistema de acuerdo con la realidad de la institución.</p></div></li>
+          <li class="paso"><span class="paso__num" aria-hidden="true">03</span><div><h3>Capacitamos</h3><p>Acompañamos al equipo para facilitar la incorporación de la plataforma a su dinámica cotidiana.</p></div></li>
+          <li class="paso"><span class="paso__num" aria-hidden="true">04</span><div><h3>Ponemos en marcha</h3><p>Comenzamos a operar con Odonapp y acompañamos las primeras etapas de adopción.</p></div></li>
+          <li class="paso paso--destacado"><span class="paso__num" aria-hidden="true">05</span><div><h3>Seguimos cerca</h3><p>La relación continúa después de la implementación, acompañando al círculo y a sus usuarios en la experiencia cotidiana.</p></div></li>
+        </ol>
+        <div class="banda">
+          <p>Implementamos tecnología. <span class="t-turquesa">Construimos relaciones de largo plazo.</span></p>
+          <a class="btn btn--turquesa" href="#contacto">Empezar la conversación
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 COMPROMISO ===================== -->
+    <section id="compromiso" class="section section--indigo compromiso">
+      <span class="deco deco--turquesa compromiso__d1" aria-hidden="true"></span>
+      <span class="deco deco--ring-white compromiso__d2" aria-hidden="true"></span>
+      <span class="deco deco--ring-white-soft compromiso__d3" aria-hidden="true"></span>
+      <div class="container compromiso__grid">
+        <div class="compromiso__intro">
+          <p class="eyebrow eyebrow--white"><span class="eyebrow__num">05</span>Nuestro compromiso</p>
+          <h2 class="compromiso__h2">Crecer sin perder la cercanía.</h2>
+          <p class="lead">Para nosotros, implementar Odonapp significa comenzar una relación con cada círculo. Por eso, el compromiso del equipo fundador continúa después de la puesta en marcha.</p>
+        </div>
+        <div class="compromiso__side">
+          <ul class="compromiso__list">
+            <li>Escuchamos a los equipos.</li>
+            <li>Acompañamos a los usuarios.</li>
+            <li>Entendemos las particularidades de cada institución.</li>
+            <li>Aprendemos de su experiencia.</li>
+          </ul>
+          <p>Y utilizamos ese conocimiento para seguir haciendo evolucionar Odonapp. Porque creemos que la mejor tecnología se construye cerca de las personas que la utilizan todos los días.</p>
+        </div>
+        <p class="compromiso__card">Queremos ser el partner tecnológico de los círculos que están construyendo <span class="t-indigo">la odontología que viene.</span></p>
+      </div>
+    </section>
+
+    <!-- ===================== TUTORIALES ===================== -->
+    <section id="tutoriales" class="section tutoriales">
+      <div class="container tutoriales__grid">
+        <div class="tutoriales__head">
+          <p class="eyebrow eyebrow--plain">Recursos para usuarios</p>
+          <h2 class="tutoriales__h2">Tutoriales</h2>
+          <p class="prose">Guías paso a paso del sistema, con capturas de cada pantalla. Para consultarlas mientras trabajás o para arrancar con un circuito nuevo.</p>
+        </div>
+        <a class="btn btn--outline tutoriales__all" href="/tutoriales/">Ver todos los tutoriales
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <ul class="tutoriales__list">
+          <li>
+            <a class="tuto" href="/tutoriales/facturacion-obras-sociales.html">
+              <span class="tuto__top">
+                <span class="icon-box hide-sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h5"/></svg></span>
+                <span class="chip chip--white-indigo">Guía paso a paso</span>
+              </span>
+              <h3>Facturación a obras sociales paso a paso</h3>
+              <p>Armar la liquidación, revisar los ítems, cargar los débitos y emitir la factura con CAE. Desde el período hasta el comprobante.</p>
+              <span class="tuto__more">Ver tutorial <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="tuto" href="/tutoriales/ordenes-de-pago.html">
+              <span class="tuto__top">
+                <span class="icon-box hide-sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+                <span class="chip chip--white-indigo">Guía paso a paso</span>
+              </span>
+              <h3>Órdenes de pago paso a paso</h3>
+              <p>Generar el lote, revisar el neto de cada odontólogo, aplicar retenciones y descuentos, y cerrar el pago con su comprobante.</p>
+              <span class="tuto__more">Ver tutorial <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="tuto" href="/tutoriales/prestaciones-osmata-nobis.html">
+              <span class="tuto__top">
+                <span class="icon-box hide-sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6v4H9z"/><path d="M9 6H6v15h12V6h-3M9 13l2 2 4-4"/></svg></span>
+                <span class="chip chip--white-indigo">Guía paso a paso</span>
+              </span>
+              <h3>Prestaciones de OSMATA y Nobis</h3>
+              <p>Cargar las prestaciones de estas dos obras sociales, que se registran en su propio sistema, y armar el plan de tratamiento que pide el código 0101.</p>
+              <span class="tuto__more">Ver tutorial <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== HABLEMOS ===================== -->
+    <section id="contacto" class="section section--turquesa contacto">
+      <span class="deco deco--indigo contacto__d1" aria-hidden="true"></span>
+      <span class="deco deco--ring-navy contacto__d2" aria-hidden="true"></span>
+      <div class="container contacto__grid">
+        <div class="contacto__info">
+          <p class="pill-outline">Hablemos</p>
+          <h2 class="contacto__h2">¿Hacemos evolucionar juntos la gestión de tu círculo?</h2>
+          <p class="contacto__lead">Conocé Odonapp y descubrí cómo podemos acompañar la transformación de tu institución.</p>
+
+          <div id="equipo" class="equipo">
+            <h3 class="eyebrow eyebrow--plain eyebrow--sm">Equipo fundador</h3>
+            <ul class="equipo__list">
+              <li>
+                <picture>
+                  <source srcset="images/equipo/hernan-toledano.webp" type="image/webp">
+                  <img class="equipo__foto equipo__foto--turquesa" src="images/equipo/hernan-toledano.jpg" alt="Hernán Toledano" width="208" height="208" loading="lazy">
+                </picture>
+                <b>Hernán Toledano</b>
+                <span>Director Comercial</span>
+              </li>
+              <li>
+                <picture>
+                  <source srcset="images/equipo/juan-pablo-planes.webp" type="image/webp">
+                  <img class="equipo__foto equipo__foto--indigo" src="images/equipo/juan-pablo-planes.jpg" alt="Juan Pablo Planes" width="208" height="208" loading="lazy">
+                </picture>
+                <b>Juan Pablo Planes</b>
+                <span>Director de Experiencia del Cliente</span>
+              </li>
+              <li>
+                <picture>
+                  <source srcset="images/equipo/hernan-brunacci.webp" type="image/webp">
+                  <img class="equipo__foto equipo__foto--navy" src="images/equipo/hernan-brunacci.jpg" alt="Hernán Brunacci" width="208" height="208" loading="lazy">
+                </picture>
+                <b>Hernán Brunacci</b>
+                <span>Director de Tecnología</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contacto__links">
+            <a class="contact-btn contact-btn--navy" href="https://wa.me/5491149927992" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg>
+              <span><span class="visually-hidden">WhatsApp: </span>+54 9 11 4992-7992</span></a>
+            <a class="contact-btn contact-btn--white" href="mailto:hctoledano@odonapp.com">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              <span><span class="visually-hidden">Email: </span>hctoledano@odonapp.com</span></a>
+          </div>
+        </div>
+
+        <!--
+          Envío: sin data-endpoint, el script arma un mail a hctoledano@odonapp.com
+          (sin JS lo hace el action mailto:). Para usar un servicio de formularios,
+          agregar data-endpoint="https://..." y el script hace un POST con los datos en JSON.
+        -->
+        <form class="demo-form" id="demo-form" action="mailto:hctoledano@odonapp.com?subject=Solicitud%20de%20demo%20-%20Odonapp" method="post" enctype="text/plain" aria-labelledby="demo-titulo">
+          <h3 id="demo-titulo">Solicitá una demo</h3>
+          <p class="demo-form__intro">Te contactamos para conocer tu círculo y mostrarte la plataforma.</p>
+          <div class="demo-form__row">
+            <div class="field">
+              <label for="f-nombre">Nombre y apellido <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-cargo">Cargo</label>
+              <input id="f-cargo" name="cargo" type="text" autocomplete="organization-title">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-institucion">Círculo / institución</label>
+            <input id="f-institucion" name="institucion" type="text" autocomplete="organization">
+          </div>
+          <div class="demo-form__row">
+            <div class="field">
+              <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="f-telefono">Teléfono</label>
+              <input id="f-telefono" name="telefono" type="tel" autocomplete="tel">
+            </div>
+          </div>
+          <fieldset class="field perfil">
+            <legend>Soy…</legend>
+            <div class="perfil__options">
+              <label class="perfil__opt"><input type="radio" name="perfil" value="Directivo/a de círculo" checked>Directivo/a de círculo</label>
+              <label class="perfil__opt"><input type="radio" name="perfil" value="Equipo administrativo">Equipo administrativo</label>
+              <label class="perfil__opt"><input type="radio" name="perfil" value="Odontólogo/a">Odontólogo/a</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-mensaje">Mensaje</label>
+            <textarea id="f-mensaje" name="mensaje" rows="4"></textarea>
+          </div>
+          <button class="btn btn--turquesa btn--lg btn--block demo-form__submit" type="submit">
+            <span class="demo-form__submit-text">Quiero conocer Odonapp</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="demo-form__status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
   </main>
 
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/5491124062731"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chatear por WhatsApp"
-  >
-    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-      <path
-        d="M16 3a13 13 0 0 0-11.2 19.5L3 29l6.7-1.7A13 13 0 1 0 16 3Zm0 24a11 11 0 0 1-5.6-1.5l-.4-.2l-4 .9l.9-3.9l-.2-.4A11 11 0 1 1 27 16A11 11 0 0 1 16 27Zm6-8.5c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2s-.8 1-1 1.2s-.4.2-.7 0s-1.4-.5-2.7-1.7c-1-.9-1.7-2-1.9-2.3s0-.5.1-.6s.3-.3.5-.4s.3-.2.4-.3s.2-.2.3-.4s0-.3 0-.4s-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4a3.3 3.3 0 0 0-1 2.5c0 1.5 1.1 2.9 1.2 3.1s2.2 3.4 5.2 4.8a17.2 17.2 0 0 0 1.7.6a4.1 4.1 0 0 0 1.9.1c.6-.1 1.8-.7 2-1.4a2.6 2.6 0 0 0 .2-1.4c0-.2-.2-.2-.5-.3Z"
-      />
-    </svg>
-  </a>
-
-  <footer id="contacto" class="site-footer">
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="cta-block">
-        <p>Odonapp. Profesionalizá la gestión. Simplificá tu día. De la ficha al futuro.</p>
-        <a href="mailto:contacto@odonapp.com" class="cta-link">Solicitá tu demo personalizada</a>
-      </div>
-      <div class="contact-info">
-        <a href="mailto:contacto@odonapp.com">contacto@odonapp.com</a>
-        <a href="tel:+5491124062731">+54 9 11 2406 2731</a>
-        <a href="https://www.odonapp.com" target="_blank" rel="noopener">www.odonapp.com</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-grid">
-        <div class="footer-logo">
-          <img src="images/logotipo.png" alt="Odonapp">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <span class="logo-pill">
+            <picture>
+              <source srcset="images/odonapp-logo.webp" type="image/webp">
+              <img src="images/odonapp-logo.png" alt="Odonapp" width="298" height="88" loading="lazy">
+            </picture>
+          </span>
+          <p>Para círculos que evolucionan y gestiones que dejan huella.</p>
         </div>
-        <p>Todos los derechos reservados 2023.</p>
-        <div class="socials">
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zm6.25-2.75a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.71h.05c.53-1 1.84-2.06 3.8-2.06c4.07 0 4.82 2.68 4.82 6.16V21h-4v-5.62c0-1.34-.03-3.07-1.87-3.07c-1.87 0-2.16 1.46-2.16 2.97V21H9z"/></svg>
-          </a>
-          <a href="#" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3h4a1 1 0 0 1 1 1v4h-3a1 1 0 0 0-1 1v3h4l-1 4h-3v6h-4v-6H8v-4h3V9a4 4 0 0 1 4-4z"/></svg>
-          </a>
+        <div class="site-footer__cols">
+          <nav class="site-footer__col" aria-labelledby="ft-odonapp">
+            <h2 id="ft-odonapp">Odonapp</h2>
+            <a href="#que-es">Qué es</a>
+            <a href="#valor">El valor</a>
+            <a href="#funcionalidades">Funcionalidades</a>
+            <a href="#como">Cómo lo hacemos</a>
+            <a href="#tutoriales">Tutoriales</a>
+          </nav>
+          <div class="site-footer__col site-footer__col--contacto">
+            <h2>Contacto</h2>
+            <span class="site-footer__name">Hernán Toledano · Director Comercial</span>
+            <a href="mailto:hctoledano@odonapp.com">hctoledano@odonapp.com</a>
+            <a href="https://wa.me/5491149927992" target="_blank" rel="noopener">+54 9 11 4992-7992</a>
+            <a href="https://www.odonapp.com">www.odonapp.com</a>
+            <a href="#contacto">Solicitar una demo</a>
+          </div>
+          <div class="site-footer__col">
+            <h2>Seguinos</h2>
+            <a class="site-footer__social" href="https://www.instagram.com/odonapp" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+              <span><span class="visually-hidden">Instagram </span>@odonapp</span></a>
+            <a class="site-footer__social" href="https://linkedin.com/company/odonapp" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+              <span class="solo-xl">linkedin.com/company/odonapp</span><span class="hasta-xl">LinkedIn</span></a>
+            <a href="https://www.odonapp.com">Ingresar a la plataforma</a>
+          </div>
         </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 Odonapp. Todos los derechos reservados.</span>
+        <span>Simplificamos la gestión · Hecho en Argentina</span>
       </div>
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
