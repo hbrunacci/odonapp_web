@@ -125,7 +125,7 @@
     const cuerpo = [
       'Nombre y apellido: ' + d.nombre,
       'Cargo: ' + d.cargo,
-      'Círculo / institución: ' + d.institucion,
+      'Institución: ' + d.institucion,
       'Email: ' + d.email,
       'Teléfono: ' + d.telefono,
       'Soy: ' + d.perfil,
