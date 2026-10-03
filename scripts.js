@@ -67,34 +67,17 @@
     if (e.matches) cerrarMenu({ devolverFoco: false });
   });
 
-  /* ---------- Pestañas de Funcionalidades ---------- */
-  const tabs = Array.from(document.querySelectorAll('.tabs [role="tab"]'));
-
-  function activarTab(tab, enfocar) {
-    tabs.forEach((t) => {
-      const activa = t === tab;
-      t.setAttribute('aria-selected', String(activa));
-      t.tabIndex = activa ? 0 : -1;
-      document.getElementById(t.getAttribute('aria-controls')).hidden = !activa;
-    });
-    if (enfocar) tab.focus();
+  /* ---------- Carrusel de instituciones ---------- */
+  const carrusel = document.querySelector('.clientes__carrusel');
+  const sinMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (carrusel && !sinMovimiento.matches) {
+    const lista = carrusel.querySelector('.clientes__list');
+    const copia = lista.cloneNode(true);
+    copia.setAttribute('aria-hidden', 'true');
+    copia.querySelectorAll('img').forEach((img) => { img.alt = ''; });
+    carrusel.appendChild(copia);
+    carrusel.classList.add('is-animado');
   }
-
-  tabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => activarTab(tab, false));
-    tab.addEventListener('keydown', (e) => {
-      let destino = null;
-      if (e.key === 'ArrowRight') destino = tabs[(i + 1) % tabs.length];
-      else if (e.key === 'ArrowLeft') destino = tabs[(i - 1 + tabs.length) % tabs.length];
-      else if (e.key === 'Home') destino = tabs[0];
-      else if (e.key === 'End') destino = tabs[tabs.length - 1];
-      if (destino) {
-        e.preventDefault();
-        activarTab(destino, true);
-      }
-    });
-  });
-  if (tabs.length) activarTab(tabs[0], false);
 
   /* ---------- Formulario de demo ---------- */
   const form = document.getElementById('demo-form');
@@ -102,10 +85,25 @@
   const boton = form.querySelector('.demo-form__submit');
   const textoBoton = boton.querySelector('.demo-form__submit-text');
   const EMAIL_DESTINO = 'hctoledano@odonapp.com';
+  const MSJ_ERROR = 'No pudimos enviar tu solicitud. Probá de nuevo o escribinos a <a href="mailto:' + EMAIL_DESTINO + '">' + EMAIL_DESTINO + '</a>.';
 
   function mostrarEstado(tipo, html) {
     estado.className = 'demo-form__status' + (tipo ? ' is-' + tipo : '');
     estado.innerHTML = html;
+  }
+
+  function mensajeExito(email) {
+    const span = document.createElement('span');
+    span.textContent = email;
+    return '¡Gracias! Recibimos tu solicitud y te vamos a contactar a la brevedad.' +
+      (email ? ' Te enviamos una copia a <b>' + span.innerHTML + '</b>.' : '');
+  }
+
+  /* Vuelta del envío sin JavaScript (el servicio redirige con ?consulta=...) */
+  const resultado = new URLSearchParams(location.search).get('consulta');
+  if (resultado) {
+    mostrarEstado(resultado === 'enviada' ? 'success' : 'error', resultado === 'enviada' ? mensajeExito('') : MSJ_ERROR);
+    history.replaceState(null, '', location.pathname + location.hash);
   }
 
   function datosDelForm() {
@@ -118,24 +116,8 @@
       telefono: (fd.get('telefono') || '').trim(),
       perfil: fd.get('perfil') || '',
       mensaje: (fd.get('mensaje') || '').trim(),
+      sitio_web: fd.get('sitio_web') || '',
     };
-  }
-
-  function enviarPorMail(d) {
-    const cuerpo = [
-      'Nombre y apellido: ' + d.nombre,
-      'Cargo: ' + d.cargo,
-      'Institución: ' + d.institucion,
-      'Email: ' + d.email,
-      'Teléfono: ' + d.telefono,
-      'Soy: ' + d.perfil,
-      '',
-      d.mensaje,
-    ].join('\n');
-    const asunto = 'Solicitud de demo — ' + (d.institucion || d.nombre);
-    window.location.href = 'mailto:' + EMAIL_DESTINO +
-      '?subject=' + encodeURIComponent(asunto) +
-      '&body=' + encodeURIComponent(cuerpo);
   }
 
   async function enviarAEndpoint(url, d) {
@@ -154,23 +136,17 @@
       return;
     }
     const d = datosDelForm();
-    const endpoint = form.dataset.endpoint;
 
     boton.disabled = true;
     textoBoton.textContent = 'Enviando…';
     mostrarEstado('sending', 'Enviando tu solicitud…');
 
     try {
-      if (endpoint) {
-        await enviarAEndpoint(endpoint, d);
-        form.reset();
-        mostrarEstado('success', '¡Gracias! Recibimos tu solicitud y te vamos a contactar a la brevedad.');
-      } else {
-        enviarPorMail(d);
-        mostrarEstado('success', 'Abrimos tu programa de correo con la solicitud lista para enviar. Si no se abrió, escribinos a <a href="mailto:' + EMAIL_DESTINO + '">' + EMAIL_DESTINO + '</a>.');
-      }
+      await enviarAEndpoint(form.dataset.endpoint || form.action, d);
+      form.reset();
+      mostrarEstado('success', mensajeExito(d.email));
     } catch (err) {
-      mostrarEstado('error', 'No pudimos enviar tu solicitud. Probá de nuevo o escribinos a <a href="mailto:' + EMAIL_DESTINO + '">' + EMAIL_DESTINO + '</a>.');
+      mostrarEstado('error', MSJ_ERROR);
     } finally {
       boton.disabled = false;
       textoBoton.textContent = 'Quiero conocer Odonapp';

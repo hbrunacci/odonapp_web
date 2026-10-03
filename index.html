@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20260930">
+  <link rel="stylesheet" href="styles.css?v=20261003">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -57,8 +57,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
       <nav class="site-nav" aria-label="Principal">
         <a href="#que-es">Qué es</a>
-        <a href="#valor">El valor</a>
         <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#valor">El valor</a>
         <a href="#como">Cómo lo hacemos</a>
         <a href="#equipo">Equipo</a>
       </nav>
@@ -89,8 +89,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="menu-mobile__nav" aria-label="Principal (mobile)">
       <a href="#que-es">Qué es</a>
-      <a href="#valor">El valor</a>
       <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#valor">El valor</a>
       <a href="#como">Cómo lo hacemos</a>
       <a href="#equipo">Equipo</a>
     </nav>
@@ -185,6 +185,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="clientes__stat"><strong>+750</strong> <span>odontólogos ya gestionan sus prestaciones con Odonapp</span></p>
         <div class="clientes__right">
           <h2 class="eyebrow eyebrow--muted" id="clientes-titulo">Instituciones que ya evolucionan con nosotros</h2>
+          <div class="clientes__carrusel">
           <ul class="clientes__list">
             <li class="cliente">
               <picture>
@@ -203,23 +204,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="cliente">
               <picture>
                 <source srcset="images/clientes/circulo-pergamino-colon-capitan-sarmiento.webp" type="image/webp">
-                <img class="cliente__logo cliente__logo--round" src="images/clientes/circulo-pergamino-colon-capitan-sarmiento.jpg" alt="Logo Círculo Odontológico de Pergamino, Colón y Capitán Sarmiento" width="120" height="120" loading="lazy">
+                <img class="cliente__logo cliente__logo--round" src="images/clientes/circulo-pergamino-colon-capitan-sarmiento.jpg" alt="Logo Círculo Odontológico de Pergamino" width="120" height="120" loading="lazy">
               </picture>
-              <span><span class="hide-sm">Círculo Odontológico de </span>Pergamino, Colón y Capitán Sarmiento</span>
+              <span>Círculo Odontológico de Pergamino</span>
             </li>
             <li class="cliente">
               <picture>
                 <source srcset="images/clientes/circulo-san-martin-junin-de-los-andes.webp" type="image/webp">
                 <img class="cliente__logo cliente__logo--wide cliente__logo--smj" src="images/clientes/circulo-san-martin-junin-de-los-andes.jpg" alt="Logo Círculo Odontológico San Martín y Junín de los Andes" width="426" height="120" loading="lazy">
               </picture>
-              <span>San Martín y Junín de los Andes</span>
+              <span>Círculo Odontológico San Martín y Junín de los Andes</span>
+            </li>
+            <li class="cliente">
+              <img class="cliente__logo cliente__logo--round" src="images/clientes/circulo-colon.svg" alt="Círculo Odontológico de Colón" width="120" height="120" loading="lazy">
+              <span>Círculo Odontológico de Colón</span>
+            </li>
+            <li class="cliente">
+              <img class="cliente__logo cliente__logo--round" src="images/clientes/circulo-capitan-sarmiento.svg" alt="Círculo Odontológico de Capitán Sarmiento" width="120" height="120" loading="lazy">
+              <span>Círculo Odontológico de Capitán Sarmiento</span>
             </li>
           </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== 01 QUÉ ES ===================== -->
+    <!-- ===================== 01 QUÉ ES + FUNCIONALIDADES ===================== -->
     <section id="que-es" class="section que-es">
       <span class="deco deco--turquesa-claro que-es__d1" aria-hidden="true"></span>
       <span class="deco deco--ring-lavanda que-es__d2" aria-hidden="true"></span>
@@ -261,6 +271,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>El equipo puede dedicar más tiempo a iniciativas que generan valor para los asociados: capacitaciones, eventos, atención y nuevos proyectos institucionales.</p>
           </div>
         </div>
+
+        <div id="funcionalidades" class="funcionalidades">
+          <div class="func__header">
+            <p class="eyebrow">Funcionalidades</p>
+            <h3 class="func__h">Una plataforma para cada parte <span class="t-indigo">del circuito.</span></h3>
+          </div>
+
+          <div class="func__cards">
+            <article class="func-card">
+              <span class="chip chip--turquesa-claro">Para el consultorio · profesional</span>
+              <span class="icon-box icon-box--tint icon-box--lg hide-sm"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+              <h4>Todas las obras sociales en una única pantalla</h4>
+              <p>Integración y validación de todas las obras sociales en la misma plataforma.</p>
+            </article>
+            <article class="func-card func-card--indigo">
+              <span class="deco deco--ring-white func-card__ring" aria-hidden="true"></span>
+              <span class="chip chip--turquesa">Clave para evitar débitos</span>
+              <span class="icon-box icon-box--lg hide-sm"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+              <h4>Auditoría online</h4>
+              <p>Según las normas de trabajo de cada obra social: solo podés cargar lo que vas a cobrar.</p>
+            </article>
+          </div>
+
+          <div class="inst">
+            <div class="inst__head">
+              <span class="chip chip--turquesa">Para las instituciones</span>
+              <h4>Todo el circuito administrativo de la institución, en un solo lugar.</h4>
+            </div>
+            <ul class="inst__list">
+              <li><b>Ajustable 100%</b> a los requerimientos de cada obra social.</li>
+              <li><b>Cuenta corriente única.</b></li>
+              <li><b>Validación con ARCA</b> · Facturación.</li>
+              <li><b>Carga automática de débitos:</b> ahorra tiempo de procesos manuales.</li>
+              <li><b>Comunicación constante y automatizada</b> con el profesional.</li>
+              <li><b>Módulo de stock:</b> venta de materiales incluida en la cuenta corriente del socio.</li>
+              <li><b>Módulo de eventos, cursos y capacitaciones</b> para administrar toda su gestión.</li>
+            </ul>
+          </div>
+        </div>
+
         <p class="tagline">De la ficha a una gestión que <span class="t-indigo">evoluciona.</span></p>
       </div>
     </section>
@@ -312,64 +362,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <!-- ===================== 03 FUNCIONALIDADES ===================== -->
-    <section id="funcionalidades" class="section section--lavanda funcionalidades">
-      <div class="container">
-        <div class="func__header">
-          <div class="func__title">
-            <p class="eyebrow eyebrow--on-lavanda"><span class="eyebrow__num">03</span>Funcionalidades</p>
-            <h2>Una plataforma para cada parte <span class="t-indigo">del circuito.</span></h2>
-          </div>
-          <div class="tabs" role="tablist" aria-label="Funcionalidades por perfil">
-            <button class="tabs__tab" type="button" role="tab" id="tab-consultorio" aria-controls="panel-consultorio" aria-selected="true"><span class="hide-sm">Para el consultorio</span><span class="show-sm">Consultorio</span></button>
-            <button class="tabs__tab" type="button" role="tab" id="tab-instituciones" aria-controls="panel-instituciones" aria-selected="false" tabindex="-1"><span class="hide-sm">Para las instituciones</span><span class="show-sm">Instituciones</span></button>
-          </div>
-        </div>
-
-        <div class="func__panel" id="panel-consultorio" role="tabpanel" aria-labelledby="tab-consultorio" tabindex="0">
-          <div class="func__cards">
-            <article class="func-card">
-              <span class="chip chip--turquesa-claro">Para el consultorio · profesional</span>
-              <span class="icon-box icon-box--tint icon-box--lg hide-sm"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
-              <h3>Todas las obras sociales en una única pantalla</h3>
-              <p>Integración y validación de todas las obras sociales en la misma plataforma.</p>
-            </article>
-            <article class="func-card func-card--indigo">
-              <span class="deco deco--ring-white func-card__ring" aria-hidden="true"></span>
-              <span class="chip chip--turquesa">Clave para evitar débitos</span>
-              <span class="icon-box icon-box--lg hide-sm"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
-              <h3>Auditoría online</h3>
-              <p>Según las normas de trabajo de cada obra social: solo podés cargar lo que vas a cobrar.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="func__panel" id="panel-instituciones" role="tabpanel" aria-labelledby="tab-instituciones" tabindex="0">
-          <div class="inst">
-            <div class="inst__head">
-              <span class="chip chip--turquesa">Para las instituciones</span>
-              <h3>Todo el circuito administrativo de la institución, en un solo lugar.</h3>
-            </div>
-            <ul class="inst__list">
-              <li><b>Ajustable 100%</b> a los requerimientos de cada obra social.</li>
-              <li><b>Cuenta corriente única.</b></li>
-              <li><b>Validación con ARCA</b> · Facturación.</li>
-              <li><b>Carga automática de débitos:</b> ahorra tiempo de procesos manuales.</li>
-              <li><b>Comunicación constante y automatizada</b> con el profesional.</li>
-              <li><b>Módulo de stock:</b> venta de materiales incluida en la cuenta corriente del socio.</li>
-              <li><b>Módulo de eventos, cursos y capacitaciones</b> para administrar toda su gestión.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 04 CÓMO LO HACEMOS ===================== -->
+    <!-- ===================== 03 CÓMO LO HACEMOS ===================== -->
     <section id="como" class="section como">
       <div class="container">
         <div class="split">
           <div class="split__main">
-            <p class="eyebrow"><span class="eyebrow__num">04</span>Cómo lo hacemos</p>
+            <p class="eyebrow"><span class="eyebrow__num">03</span>Cómo lo hacemos</p>
             <h2>La tecnología es una parte. <span class="t-indigo">El acompañamiento hace la diferencia.</span></h2>
           </div>
           <p class="split__side prose">Cada institución tiene su propia historia, dinámica de trabajo y realidad operativa. Por eso, la incorporación de Odonapp comienza entendiendo cómo funciona la institución y continúa acompañando a las personas que van a utilizar la plataforma.</p>
@@ -389,14 +387,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <!-- ===================== 05 COMPROMISO ===================== -->
+    <!-- ===================== 04 COMPROMISO ===================== -->
     <section id="compromiso" class="section section--indigo compromiso">
       <span class="deco deco--turquesa compromiso__d1" aria-hidden="true"></span>
       <span class="deco deco--ring-white compromiso__d2" aria-hidden="true"></span>
       <span class="deco deco--ring-white-soft compromiso__d3" aria-hidden="true"></span>
       <div class="container compromiso__grid">
         <div class="compromiso__intro">
-          <p class="eyebrow eyebrow--white"><span class="eyebrow__num">05</span>Nuestro compromiso</p>
+          <p class="eyebrow eyebrow--white"><span class="eyebrow__num">04</span>Nuestro compromiso</p>
           <h2 class="compromiso__h2">Crecer sin perder la cercanía.</h2>
           <p class="lead">Para nosotros, implementar Odonapp significa comenzar una relación con cada institución. Por eso, el compromiso del equipo fundador continúa después de la puesta en marcha.</p>
         </div>
@@ -409,7 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </ul>
           <p>Y utilizamos ese conocimiento para seguir haciendo evolucionar Odonapp. Porque creemos que la mejor tecnología se construye cerca de las personas que la utilizan todos los días.</p>
         </div>
-        <p class="compromiso__card">Queremos ser el partner tecnológico de las instituciones que están construyendo <span class="t-indigo">la odontología que viene.</span></p>
+        <p class="compromiso__card">Somos el partner tecnológico de las instituciones que están construyendo <span class="t-indigo">la odontología que viene.</span></p>
       </div>
     </section>
 
@@ -464,11 +462,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <!--
-          Envío: sin data-endpoint, el script arma un mail a hctoledano@odonapp.com
-          (sin JS lo hace el action mailto:). Para usar un servicio de formularios,
-          agregar data-endpoint="https://..." y el script hace un POST con los datos en JSON.
+          Envío: POST a /api/contacto (servicio odonapp_contacto en el server, ver
+          /home/cop/odonapp_contacto). Manda la consulta al equipo y una confirmación al visitante.
         -->
-        <form class="demo-form" id="demo-form" action="mailto:hctoledano@odonapp.com?subject=Solicitud%20de%20demo%20-%20Odonapp" method="post" enctype="text/plain" aria-labelledby="demo-titulo">
+        <form class="demo-form" id="demo-form" action="/api/contacto" method="post" data-endpoint="/api/contacto" aria-labelledby="demo-titulo">
+          <div class="demo-form__trampa" aria-hidden="true">
+            <label for="f-sitio">No completar</label>
+            <input id="f-sitio" name="sitio_web" type="text" tabindex="-1" autocomplete="off">
+          </div>
           <h3 id="demo-titulo">Solicitá una demo</h3>
           <p class="demo-form__intro">Te contactamos para conocer tu institución y mostrarte la plataforma.</p>
           <div class="demo-form__row">
@@ -535,8 +536,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <nav class="site-footer__col" aria-labelledby="ft-odonapp">
             <h2 id="ft-odonapp">Odonapp</h2>
             <a href="#que-es">Qué es</a>
-            <a href="#valor">El valor</a>
             <a href="#funcionalidades">Funcionalidades</a>
+            <a href="#valor">El valor</a>
             <a href="#como">Cómo lo hacemos</a>
           </nav>
           <div class="site-footer__col site-footer__col--contacto">
@@ -566,6 +567,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </footer>
 
-  <script src="scripts.js?v=20260930" defer></script>
+  <script src="scripts.js?v=20261003" defer></script>
 </body>
 </html>
