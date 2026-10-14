@@ -92,19 +92,55 @@
     estado.innerHTML = html;
   }
 
-  function mensajeExito(email) {
-    const span = document.createElement('span');
-    span.textContent = email;
-    return '¡Gracias! Recibimos tu solicitud y te vamos a contactar a la brevedad.' +
-      (email ? ' Te enviamos una copia a <b>' + span.innerHTML + '</b>.' : '');
-  }
+  const MSJ_EXITO = '¡Gracias! Recibimos tu solicitud y te vamos a contactar a la brevedad.';
 
   /* Vuelta del envío sin JavaScript (el servicio redirige con ?consulta=...) */
   const resultado = new URLSearchParams(location.search).get('consulta');
   if (resultado) {
-    mostrarEstado(resultado === 'enviada' ? 'success' : 'error', resultado === 'enviada' ? mensajeExito('') : MSJ_ERROR);
+    mostrarEstado(resultado === 'enviada' ? 'success' : 'error', resultado === 'enviada' ? MSJ_EXITO : MSJ_ERROR);
     history.replaceState(null, '', location.pathname + location.hash);
   }
+
+  /* Captcha propio: el servicio da un desafío firmado y el navegador busca el número
+     cuyo SHA-256 coincide. Se empieza a resolver apenas la persona entra al formulario. */
+  const endpoint = form.dataset.endpoint || form.action;
+  const VIGENCIA_CAPTCHA_MS = 50 * 60 * 1000;
+  let captcha = null;
+
+  const hex = (buf) => Array.from(new Uint8Array(buf), (b) => b.toString(16).padStart(2, '0')).join('');
+
+  async function resolverDesafio() {
+    const r = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ accion: 'desafio' }),
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const d = await r.json();
+    const enc = new TextEncoder();
+    const LOTE = 500;
+    for (let i = 0; i <= d.max; i += LOTE) {
+      const pruebas = [];
+      for (let n = i; n < i + LOTE && n <= d.max; n++) {
+        pruebas.push(crypto.subtle.digest('SHA-256', enc.encode(d.salt + n)));
+      }
+      const j = (await Promise.all(pruebas)).findIndex((h) => hex(h) === d.desafio);
+      if (j >= 0) return { salt: d.salt, numero: i + j, firma: d.firma };
+    }
+    throw new Error('Captcha sin solución');
+  }
+
+  function prepararCaptcha() {
+    if (!captcha || Date.now() - captcha.desde > VIGENCIA_CAPTCHA_MS) {
+      const promesa = resolverDesafio();
+      const actual = { promesa, desde: Date.now() };
+      promesa.catch(() => { if (captcha === actual) captcha = null; });
+      captcha = actual;
+    }
+    return captcha.promesa;
+  }
+
+  form.addEventListener('focusin', prepararCaptcha, { once: true });
 
   function datosDelForm() {
     const fd = new FormData(form);
@@ -142,12 +178,14 @@
     mostrarEstado('sending', 'Enviando tu solicitud…');
 
     try {
-      await enviarAEndpoint(form.dataset.endpoint || form.action, d);
+      d.captcha = await prepararCaptcha();
+      await enviarAEndpoint(endpoint, d);
       form.reset();
-      mostrarEstado('success', mensajeExito(d.email));
+      mostrarEstado('success', MSJ_EXITO);
     } catch (err) {
       mostrarEstado('error', MSJ_ERROR);
     } finally {
+      captcha = null; // cada desafío sirve para un solo envío
       boton.disabled = false;
       textoBoton.textContent = 'Quiero conocer Odonapp';
     }
